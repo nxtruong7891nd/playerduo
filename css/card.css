@@ -1,0 +1,235 @@
+.wrapper {
+    background-color: #e9ebee;
+}
+
+.fieldGroup input,
+.fieldGroup select {
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    font-size: 15px;
+    border-radius: 3px;
+    border: 1px solid #777;
+    color: #333;
+    padding: 0 10px;
+    margin-bottom: 7px;
+}
+
+.fieldGroup {
+    margin-bottom: 15px;
+}
+
+.Card__buy--main {
+    padding: 15px 0px;
+}
+
+@media screen and (max-width: 425px) {
+    .Card__buy--menu {
+        padding: 0px !important;
+    }
+}
+
+.Card__buy--menu .active {
+    background-color: rgb(240, 86, 74);
+    color: rgb(255, 255, 255);
+}
+
+.Card__buy--menu .active .card-icon {
+    border: 2px solid rgb(255, 255, 255);
+}
+
+.Card__buy--menu p {
+    background-color: rgb(255, 255, 255);
+    border-left: 6px solid rgb(240, 86, 74);
+    padding: 13px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: rgb(240, 86, 74);
+}
+
+.Card__buy--menu p .card-icon {
+    margin-right: 5px;
+    background-color: rgb(240, 86, 74);
+    color: rgb(255, 255, 255);
+    border-radius: 50%;
+    font-style: italic;
+}
+
+.Card__buy--menu p:first-child .card-icon {
+    padding: 6px 10px 5px 9px;
+}
+
+.Card__buy--menu p:nth-child(2) .card-icon {
+    padding: 7px 9px 5px 6px;
+}
+
+.Card__buy--menu p:nth-child(3) .card-icon {
+    padding: 6px 9px 5px 7px;
+}
+
+.Card__buy--menu p:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.Card__buy--content {
+    padding: 0px !important;
+}
+
+.Card__buy--content .card-classtify {
+    padding-right: 0px;
+    margin-bottom: 15px;
+}
+
+@media screen and (max-width: 425px) {
+    .Card__buy--content .card-classtify {
+        padding: 0px;
+    }
+}
+
+.Card__buy--content .card-classtify .card-item-avt {
+    background: rgb(255, 255, 255);
+    border-radius: 4px 4px 0px 0px;
+    padding: 15px;
+    position: relative;
+}
+
+.Card__buy--content .card-classtify .card-item-avt .Navcard_Image {
+    min-height: 75px;
+}
+
+.Card__buy--content .card-classtify .card-item-avt .discount-mobile {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: rgb(240, 86, 74);
+    color: rgb(255, 255, 255);
+    padding: 2px 5px;
+    font-weight: 600;
+}
+
+.Card__buy--content .card-classtify .card-item-content {
+    background: rgb(255, 255, 255);
+    border-radius: 0px 0px 4px 4px;
+    padding: 0px 10px 15px;
+}
+
+.Card__buy--content .card-classtify .card-item-content .fieldGroup input {
+    margin: 0px;
+    text-align: left;
+}
+
+.Card__buy--content .card-classtify .card-item-content .card-name {
+    text-align: center;
+    font-weight: 700;
+}
+
+.Card__buy--content .card-classtify .card-item-content .Navcard_dropdown {
+    width: 100%;
+    height: 40px;
+    font-size: 15px;
+    border-radius: 3px;
+    /* border: 1px solid rgb(119, 119, 119); */
+    color: rgb(51, 51, 51);
+    padding: 0px 10px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.Card__buy--content .card-classtify .card-item-content .Navcard_dropdown:hover {
+    cursor: pointer;
+}
+
+.Card__buy--content .card-classtify .card-item-content .Navcard_dropdown .Navcard_dropdown_button {
+    padding: 9px 0px;
+    width: 100%;
+}
+
+.Card__buy--content .card-classtify .card-item-content .Navcard_dropdown .Navcard_dropdown_button .fa-caret-down {
+    float: right;
+    padding-top: 3px;
+}
+
+.Card__buy--content .card-classtify .card-item-content .Navcard_dropdown .dropdown-price-list {
+    padding: 0px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    left: 0px;
+    z-index: 99;
+    border: 1px solid rgb(226, 230, 234);
+    border-radius: 0px 0px 4px 4px;
+    max-height: 220px;
+    overflow: auto;
+}
+
+.Card__buy--content .card-classtify .card-item-content .Navcard_dropdown .dropdown-price-list li {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.Card__buy--content .card-classtify .card-item-content .Navcard_dropdown .dropdown-price-list li:hover {
+    background: rgb(245, 245, 245);
+    cursor: pointer;
+}
+
+.Card__buy--content .card-classtify .card-item-content .Navcard_modal button {
+    background-color: rgb(240, 86, 74);
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    border: 1px solid rgb(240, 86, 74);
+    padding: 10px 0px;
+    width: 100%;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+.Card__buy--content .card-classtify .card-item-content .Navcard_modal button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.Card__buy--content .card-classtify .card-item-content .Navcard_modal button:disabled {
+    opacity: 0.8;
+    cursor: no-drop;
+}
+
+.modal-buy-cards table tr td {
+    border: none;
+    vertical-align: middle;
+    font-weight: 700;
+    padding: 10px 0px;
+}
+
+.modal-buy-cards table tr td a {
+    font-weight: 700;
+}
+
+.modal-buy-cards table tr td:first-child {
+    width: 160px;
+    padding-right: 15px;
+}
+
+@media screen and (max-width: 425px) {
+    .modal-buy-cards table tr td:first-child {
+        width: auto;
+    }
+}
+
+.modal-buy-cards table tr td .err-price {
+    margin: 0px;
+    font-size: 12px;
+    color: rgb(240, 86, 74);
+    font-style: italic;
+}
+
+.modal-buy-cards table tr td .load-credit {
+    cursor: pointer;
+}
+
+.modal-buy-cards table tr td .fa-copy {
+    margin-left: 10px;
+    color: rgb(240, 86, 74);
+    cursor: pointer;
+}

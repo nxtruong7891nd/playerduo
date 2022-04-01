@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playerduo</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+    <script src="https://www.google.com/recaptcha/api.js" async=""></script>
+    <link rel="stylesheet" href="./css/normalize.min.css">
+    <link rel="stylesheet" href="./font-awesome/css/all.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+</head>
+
+<body>
+    <header class="menu__header">
+        <div class="navbar-header">
+            <a href="" class="logo">
+                <img src="./images/logo.png" alt="logo playerduo">
+                <div class="text-logo d-lg-block d-none">
+                    <h4>PLAYERDUO</h4>
+                    <p>GAME COMMUNITY</p>
+                </div>
+            </a>
+        </div>
+        <div class="navbar p-0">
+            <ul class="navbar-left">
+                <!-- <li class="item active"><a href=""><span>Thuê người chơi</span></a></li>
+                <li class="item"><a href=""><span>Kết nối</span></a></li>
+                <li class="item"><a href="" data-bs-toggle="modal" data-bs-target="#rank" aria-hidden="true"><span>BXH</span></a></li> -->
+                <li class="item-search">
+                    <form action="">
+                        <input type="text" class="form-control" placeholder="Nickname/Url ..." disabled>
+                        <button type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </form>
+                </li>
+            </ul>
+            <ul class="navbar-right">
+                <li class="item-icon mobile-search">
+                    <a class="dropdown-toggle">
+                        <div class="item-title"><i class="fa fa-bars" aria-hidden="true"></i></div>
+                    </a>
+                </li>
+                <li class="item-icon facebook">
+                    <a href="" class="dropdown-toggle" id="dropdown-facebook" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                        <i class="fab fa-facebook-f"></i></a>
+                    <div class="dropdown-menu p-2 facebook-dp" aria-labelledby="dropdown-facebook">
+                        <p>Group</p>
+                        <p>Fanpage</p>
+                    </div>
+                </li>
+                <li class="item-icon group-fb"><a href="" class="group-user" data-bs-toggle="modal" data-bs-target="#rank" aria-hidden="true"><i class="far fa-trophy-alt"></i></a></li>
+                <li class="item-icon facebook">
+                    <a href="" class="dropdown-toggle group-user flag" id="dropdown-globe" data-bs-toggle="dropdown" data-bs-auto-close="outside">
+                        <i class="fas fa-globe"></i></a>
+                    <div class="dropdown-menu  p-2 facebook-dp" aria-labelledby="dropdown-globe">
+                        <p class="active">Vietnamese</p>
+                        <p>English</p>
+                    </div>
+                </li>
+                <li class="item-icon authent"><a class="money-user" href="./login.html"><span>Đăng nhập</span></a></li>
+            </ul>
+        </div>
+        <div class="mobile-input-search">
+            <div class="group-search">
+                <span class="search input-group">
+                    <input placeholder="Nickname/Url ..." type="text" class="form-control" value="" disabled>
+                    <span class="input-group-addon">
+                        <button type="button" class="btn btn-default"><i class="fa fa-search"
+                                aria-hidden="true"></i></button>
+                    </span>
+                </span>
+            </div>
+            <!-- <div class="link-mobile">
+                <li class="item active"><a href="/"><span>Thuê người chơi</span></a></li>
+                <li class="item false"><a href="/connect"><span>Kết nối</span></a></li>
+                <li class="item"><a data-bs-toggle="modal" data-bs-target="#rank" aria-hidden="true"><span>BXH</span></a></li>
+            </div> -->
+        </div>
+    </header>
+    <div class="wrapper">
+        <div class="container">
+            <div class="row login-page">
+                <div class="col-md-7 hidden-sm hidden-xs image-login"><img src="https://playerduo.com/favicons/banner_login.jpg" class="" alt="PD"></div>
+                <div class="col-md-5  col-xs-12 form-content">
+                    <div class="content-main d-none">
+                        <form>
+                            <div class="fieldGroup "><input type="text" name="username" placeholder="Tên đăng nhập" maxlength="5000" autocomplete="false" value=""></div>
+                            <div class="fieldGroup "><input type="password" name="password" placeholder="Mật khẩu" maxlength="5000" autocomplete="false" value=""></div>
+                            <div class="fieldGroup "><input type="password" name="confirmPassword" placeholder="Nhập lại mật khẩu" maxlength="5000" autocomplete="false" value=""></div>
+                            <div class="register-verify-email">
+                                <div class="fieldGroup "><input type="email" name="email" placeholder="Xác thực Email" maxlength="5000" autocomplete="false" value=""></div><button disabled=""><span>Lấy mã</span></button></div>
+                            <div class="recaptcha">
+                                <div id="g-recaptcha" data-onloadcallbackname="onloadCallback" data-verifycallbackname="verifyCallback">
+                                    <div style="width: 304px; height: 78px;">
+                                        <div><iframe title="reCAPTCHA" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LfJeF8UAAAAAN5D0Ylx8PQAeYjmEHR4G2hY9pdb&amp;co=aHR0cHM6Ly9wbGF5ZXJkdW8uY29tOjQ0Mw..&amp;hl=vi&amp;type=image&amp;v=2uoiJ4hP3NUoP9v_eBNfU6CR&amp;theme=light&amp;size=normal&amp;badge=bottomright&amp;cb=646tg862w0rx"
+                                                width="304" height="78" role="presentation" name="a-ih4yj5pdaer9" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div>
+                                        <textarea id="g-recaptcha-response-1" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
+                                    </div><iframe style="display: none;"></iframe></div>
+                            </div><button type="submit"><span>Tạo tài khoản</span></button></form><button style="background-color: gray;" class="js-login"><span>Đăng nhập</span></button>
+                        <p class="forgot_password"><a href="/login"><span>Quên mật khẩu?</span></a></p>
+                    </div>
+                    <div class="content-main">
+                        <form>
+                            <div class="fieldGroup "><input type="text" name="username" placeholder="Tên đăng nhập hoặc email" maxlength="5000" autocomplete="false" value=""></div>
+                            <div class="fieldGroup "><input type="password" name="password" placeholder="Mật khẩu" maxlength="5000" autocomplete="false" value=""></div><button type="submit"><span>Đăng nhập</span></button></form>
+                        <div class="content-middle"><i class="fab fa-facebook-square"></i>
+                            <p class="forgot-password"><a href="/login"><span>Quên mật khẩu?</span></a></p>
+                        </div><button style="background-color: gray;" class="js-res"><span>Tạo tài khoản</span></button></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Bảng xếp hạng -->
+    <div class="modal fade rank-modal" id="rank" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="rankLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-center text-uppercase" id="rankLabel">BẢNG XẾP HẠNG ĐẠI GIA
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav rank-modal-tab mb-3 justify-content-center" id="pills-tab1" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active" id="pills-home-tab1" data-bs-toggle="pill" data-bs-target="#pills-home1" role="tab" aria-controls="pills-home1" aria-selected="true"><span>Hôm nay</span></a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="pills-profile-tab2" data-bs-toggle="pill" data-bs-target="#pills-profile1" role="tab" aria-controls="pills-profile1" aria-selected="false"><span>7 ngày qua</span></a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="pills-contact-tab3" data-bs-toggle="pill" data-bs-target="#pills-contact1" role="tab" aria-controls="pills-contact1" aria-selected="false"><span>30 ngày qua</span></a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="pills-tab1Content">
+                        <div class="tab-pane fade show active" id="pills-home1" role="tabpanel" aria-labelledby="pills-home-tab1">
+                            <div class="mt-5">
+                                <div class="top-info-section"><img src="https://playerduo.com/api/upload-service/images/13d6afc5-2cfb-4247-b041-952a7b929582__131d2c70-5fae-11ec-ba40-b5b607f164e2__page_avatar.jpg" class="" alt="top donate"><img src="https://files.playerduo.com/production/static-files/no1_top_list.png"
+                                        class="background-top1" alt="s">
+                                    <p style="margin-top: 25px;"><span><a href="/page5ff8cea655977e2f46a923cb"
+                                                target="_blank" rel="noopener noreferrer"
+                                                style="font-weight: bold;">Hào Nguyễn </a></span></p>
+                                    <p style="font-weight: bold;">15,000,000 đ</p>
+                                </div>
+                                <ul class="rank-list">
+                                    <li>
+                                        <div class="rank-list__info">
+                                            <p class="rank-list__index" style="width: 25px;">#10</p>
+                                            <div class="avt avt-xs"><img src="https://playerduo.com/api/upload-service/images/284e5176-8514-4d30-ab17-9ebb5c3acfc4__a6793ab0-31e4-11ec-851f-6161af46f080__page_avatar.jpg" class="avt-img" alt="PD"><img src="https://files.playerduo.com/production/images/new-rankvip/10.png"
+                                                    class="vip-avatar undefined" alt="PD" style="height: 17px; width: 17px;"></div>
+                                            <p class="name-player-review color-vip-1">Văn Mít </p>
+                                        </div>
+                                        <p class="rank-list__money" style="margin-right: 0px;">45,665,000 đ</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-profile1" role="tabpanel" aria-labelledby="pills-profile-tab2">
+                            <div class="mt-5">
+                                <div class="top-info-section"><img src="https://playerduo.com/api/upload-service/images/8bc40fcc-b016-45c7-8233-26fa4f55fc4e__ece7fa20-a83d-11ec-ba40-b5b607f164e2__page_avatar.jpg" class="" alt="top donate"><img src="https://files.playerduo.com/production/static-files/no1_top_list.png"
+                                        class="background-top1" alt="s">
+                                    <p style="margin-top: 25px;"><span><a href="/page60f2f84a10abd358da162c70"
+                                                target="_blank" rel="noopener noreferrer"
+                                                style="font-weight: bold;">✨KEM•KHUM•TỆ 👌 </a></span></p>
+                                    <p style="font-weight: bold;">32,568,000 đ</p>
+                                </div>
+                                <ul class="rank-list">
+                                    <li>
+                                        <div class="rank-list__info">
+                                            <p class="rank-list__index" style="width: 25px;">#10</p>
+                                            <div class="avt avt-xs"><img src="https://playerduo.com/api/upload-service/images/284e5176-8514-4d30-ab17-9ebb5c3acfc4__a6793ab0-31e4-11ec-851f-6161af46f080__page_avatar.jpg" class="avt-img" alt="PD"><img src="https://files.playerduo.com/production/images/new-rankvip/10.png"
+                                                    class="vip-avatar undefined" alt="PD" style="height: 17px; width: 17px;"></div>
+                                            <p class="name-player-review color-vip-1">Văn Mít </p>
+                                        </div>
+                                        <p class="rank-list__money" style="margin-right: 0px;">45,665,000 đ</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-contact1" role="tabpanel" aria-labelledby="pills-contact-tab3">
+                            <div class="mt-5">
+                                <div class="top-info-section"><img src="https://playerduo.com/api/upload-service/images/11c77d6b-ddbc-47b4-bd07-4a0531e4a236__8e58ac60-92b3-11ec-ba40-b5b607f164e2__page_avatar.jpg" class="" alt="top donate"><img src="https://files.playerduo.com/production/static-files/no1_top_list.png"
+                                        class="background-top1" alt="s">
+                                    <p style="margin-top: 25px;"><span><a href="/hiencute1" target="_blank"
+                                                rel="noopener noreferrer" style="font-weight: bold;">Neih1 </a></span>
+                                    </p>
+                                    <p style="font-weight: bold;">255,849,000 đ</p>
+                                </div>
+                                <ul class="rank-list">
+                                    <li>
+                                        <div class="rank-list__info">
+                                            <p class="rank-list__index" style="width: 25px;">#10</p>
+                                            <div class="avt avt-xs"><img src="https://playerduo.com/api/upload-service/images/284e5176-8514-4d30-ab17-9ebb5c3acfc4__a6793ab0-31e4-11ec-851f-6161af46f080__page_avatar.jpg" class="avt-img" alt="PD"><img src="https://files.playerduo.com/production/images/new-rankvip/10.png"
+                                                    class="vip-avatar undefined" alt="PD" style="height: 17px; width: 17px;"></div>
+                                            <p class="name-player-review color-vip-1">Văn Mít </p>
+                                        </div>
+                                        <p class="rank-list__money" style="margin-right: 0px;">45,665,000 đ</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger"><span>Bảng xếp hạng đại gia</span></button>
+                    <button type="button" class="btn btn-default"><span>Bảng xếp hạng thu nhập</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./js/jquery-3.6.0.min.js "></script>
+<script src="./js/bootstrap.bundle.min.js "></script>
+<script src="./js/popper.min.js "></script>
+<script src=".js/bootstrap.min.js "></script>
+<script>
+    var header = $('header.menu__header');
+    $(window).scroll(function() {
+        if ($(window).scrollTop() > 200) {
+            header.addClass('fix-menu')
+        } else {
+            header.removeClass('fix-menu')
+        }
+    });
+    $('.navbar-right .mobile-search').click(function() {
+        $('.menu__header .mobile-input-search').toggleClass("d-block ");
+    });
+    $('.js-login').click(function() {
+        $('.form-content .content-main:first-child').toggleClass("d-none");
+        $('.form-content .content-main:last-child').toggleClass("d-none");
+
+    });
+    $(' .js-res').click(function() {
+        $('.form-content .content-main:last-child').toggleClass("d-none");
+        $('.form-content .content-main:first-child').toggleClass("d-none");
+
+    });
+</script>
+
+</html>

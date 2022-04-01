@@ -1,0 +1,145 @@
+.wrapper {
+    background-color: #e9ebee;
+}
+
+.menu__header .navbar .item-icon .money-user {
+    margin: 0 0 0 3px;
+    background: #f0f0f0;
+    border-radius: 25px;
+    text-align: center;
+    padding: 13px 10px 11px;
+    font-weight: 500;
+    font-size: 16px;
+    width: auto;
+    height: auto;
+}
+
+.login-page {
+    display: flex;
+    padding-top: 10%;
+}
+
+.login-page .form-content {
+    padding: 0px 30px;
+}
+
+.login-page .form-content .content-main {
+    margin-top: 20px;
+    border: 1px solid rgb(220, 220, 220);
+    border-radius: 8px;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    box-shadow: rgb(157, 157, 157) 5px 5px 7px 0px;
+}
+
+.login-page .form-content .content-main .register-verify-email {
+    display: flex;
+    width: 100%;
+}
+
+.login-page .form-content .content-main .register-verify-email .fieldGroup {
+    width: 69%;
+}
+
+.login-page .form-content .content-main .register-verify-email button[disabled] {
+    cursor: no-drop;
+    opacity: 0.7;
+}
+
+.login-page .form-content .content-main .register-verify-email .verified-mail-code,
+.login-page .form-content .content-main .register-verify-email button {
+    width: 30%;
+    margin-left: 1%;
+}
+
+.login-page .form-content .content-middle {
+    border-bottom: 1px solid rgb(220, 220, 220);
+    margin-bottom: 20px;
+    min-height: 50px;
+}
+
+.login-page .form-content .content-middle .fa-facebook-square {
+    float: left;
+    font-size: 35px;
+    color: rgb(63, 89, 154);
+    cursor: pointer;
+}
+
+.login-page .form-content .content-middle .forgot-password {
+    float: right;
+    padding-top: 5px;
+}
+
+.login-page .form-content button {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 3px;
+    background-color: rgb(225, 73, 56);
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.login-page .fieldGroup {
+    margin-bottom: 15px;
+}
+
+.login-page .fieldGroup .control-label {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.login-page .fieldGroup p {
+    color: rgb(51, 51, 51);
+    font-weight: 700;
+}
+
+.login-page .fieldGroup input,
+.login-page .fieldGroup select {
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    font-size: 15px;
+    border-radius: 3px;
+    border: 1px solid rgb(119, 119, 119);
+    color: rgb(51, 51, 51);
+    padding: 0px 10px;
+    margin-bottom: 7px;
+}
+
+.login-page .recaptcha {
+    margin: 5px 0px 40px;
+}
+
+.login-page .recaptcha #g-recaptcha div {
+    margin: 0px auto;
+}
+
+.login-page .err-captcha,
+.login-page .err-message {
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    float: left;
+    padding-bottom: 10px;
+    color: red !important;
+}
+
+.login-page .err-captcha {
+    margin-top: -6px;
+}
+
+.login-page .loading-img {
+    width: 170px !important;
+}
+
+@media screen and (max-width: 425px) {
+    .login-page {
+        display: block;
+        padding: 0px;
+    }
+    .login-page .form-content .content-main {
+        margin: 35px 0px;
+    }
+}

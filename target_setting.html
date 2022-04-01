@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playerduo</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/normalize.min.css">
+    <link rel="stylesheet" href="./font-awesome/css/all.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/profile.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+
+</head>
+
+<body>
+    <header class="menu__header">
+        <div class="navbar-header">
+            <a href="./index.html" class="logo">
+                <img src="./images/logo.png" alt="logo playerduo">
+                <div class="text-logo d-lg-block d-none">
+                    <h4>PLAYERDUO</h4>
+                    <p>GAME COMMUNITY</p>
+                </div>
+            </a>
+        </div>
+        <div class="navbar p-0">
+            <ul class="navbar-left">
+                <!-- <li class="item active"><a href=""><span>Thuê người chơi</span></a></li>
+                <li class="item"><a href=""><span>Kết nối</span></a></li>
+                <li class="item"><a href="" data-bs-toggle="modal" data-bs-target="#rank" aria-hidden="true"><span>BXH</span></a></li> -->
+                <li class="item-search">
+                    <form action="">
+                        <input type="text" class="form-control" placeholder="Nickname/Url ...">
+                        <button type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </form>
+                </li>
+            </ul>
+            <ul class="navbar-right">
+                <li class="item-icon mobile-search">
+                    <a class="dropdown-toggle">
+                        <div class="item-title"><i class="fa fa-bars" aria-hidden="true"></i></div>
+                    </a>
+                </li>
+                <li class="item-icon facebook">
+                    <a href="" class="dropdown-toggle" id="dropdown-facebook" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                        <i class="fab fa-facebook-f"></i></a>
+                    <div class="dropdown-menu p-2 facebook-dp" aria-labelledby="dropdown-facebook">
+                        <p>Group</p>
+                        <p>Fanpage</p>
+                    </div>
+                </li>
+                <li class="item-icon group-fb"><a href="" class="group-user" data-bs-toggle="modal" data-bs-target="#rank" aria-hidden="true"><i class="far fa-trophy-alt"></i></a></li>
+                <li class="item-icon">
+                    <a href="" class="dropdown-toggle" id="dropdown-bell" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                        <i class="far fa-bell"></i></a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown-bell">
+                        <div class="content">
+                            <div class="tab-notif-common d-flex justify-content-between">
+                                <h5>Thông báo</h5>
+                                <ul class="nav nav-pills mb-3" id="pills-tab2" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link  active" id="notification-tab" data-bs-toggle="pill" data-bs-target="#notification" type="button" role="tab" aria-controls="notification" aria-selected="false">Chính</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="other-noti-tab" data-bs-toggle="pill" data-bs-target="#other-noti" type="button" role="tab" aria-controls="other-noti" aria-selected="true">Khác</button>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="tab-content" id="pills-tab2Content">
+                                <div class="tab-pane fade" id="other-noti" role="tabpanel" aria-labelledby="other-noti-tab">
+                                    ...
+                                </div>
+                                <div class="tab-pane fade show  active" id="notification" role="tabpanel" aria-labelledby="notification-tab">
+                                    ...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="item-icon">
+                    <a href="" class="dropdown-toggle" id="dropdown-users" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                        <i class="far fa-users"></i></a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown-users">
+                        <div class="content">
+                            <div class="tab-notif-common d-flex justify-content-between">
+                                <h5>Người dùng</h5>
+                                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link  active" id="notification-tab" data-bs-toggle="pill" data-bs-target="#notification" type="button" role="tab" aria-controls="notification" aria-selected="false">Theo dõi</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="other-noti-tab" data-bs-toggle="pill" data-bs-target="#other-noti" type="button" role="tab" aria-controls="other-noti" aria-selected="true">Tương tác</button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tab-content" id="pills-tabContent">
+                                <div class="tab-pane fade" id="other-noti" role="tabpanel" aria-labelledby="other-noti-tab">
+                                    ...
+                                </div>
+                                <div class="tab-pane fade show  active" id="notification" role="tabpanel" aria-labelledby="notification-tab">
+                                    ...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="item-icon balance d-lg-block d-none">
+                    <a href="" data-bs-toggle="modal" data-bs-target="#staticBackdrop" aria-hidden="true"><i
+                            class="fas fa-plus"></i> 0 đ</a>
+                </li>
+                <li class="item-icon item-avatar">
+                    <a href="" class="d-flex justify-content-center align-items-center" id="header-nav-dropdown" data-bs-toggle="dropdown" aria-expanded="false"><img src="./images/avatar5.png" alt="" width="43px" height="43px"></a>
+                    <ul role="menu" class="dropdown-menu" aria-labelledby="header-nav-dropdown">
+                        <li class="page-user">
+                            <a tabindex="-1" href="./profile.html"><img src="./images/avatar5.png" class="avt-img" alt="PD">
+                                <div class="text-logo">
+                                    <h5>hoact</h5>
+                                    <p>ID : <span>hoact</span></p>
+                                    <p class="label-user-page"><span>Xem trang cá nhân của bạn</span></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="menu-item hidden-lg hidden-md">
+                            <a data-bs-toggle="modal" data-bs-target="#staticBackdrop" aria-hidden="true" href="#"><i class="fa fa-plus"></i> <span>Số dư</span> : <span
+                                    class="money">0
+                                    đ</span></a>
+                        </li>
+                        <li class="menu-item"><a tabindex="-1" href="./withdraw.html"><i class="fas fa-minus"></i> <span>Rút
+                                    tiền</span></a></li>
+                        <li class="menu-item"><a tabindex="-1" href="./cards.html"><i class="fas fa-credit-card"></i> <span>Mua
+                                    thẻ</span></a></li>
+                        <li class="menu-item"><a tabindex="-1" href="./security.html"><i class="fas fa-user-lock"></i><span>Tạo khóa bảo vệ</span></a></li>
+                        <li class="menu-item"><a tabindex="-1" href="./balance_fluctuation.html"><i class="fas fa-clock"></i><span>Lịch sử giao dịch</span></a></li>
+                        <li class="menu-item"><a tabindex="-1" href="./following.html"><i class="fas fa-users"></i> <span>Danh sách theo
+                                    dõi</span></a></li>
+                        <li class="menu-item"><a tabindex="-1" href="./player_donate.html"><i class="fas fa-cogs"></i> <span>Cài đặt tài
+                                    khoản</span></a></li>
+                        <li class="menu-item"><a tabindex="-1" href="./login.html"><i class="fas fa-power-off"></i> <span>Đăng
+                                    xuất</span></a></li>
+                        <div class="menu-item list-flag">
+                            <div class="flag-all active"><img src="https://files.playerduo.com/production/static-files/flag/2.png" class="flag flag-vn" alt="PD"></div>
+                            <div class="flag-all false"><img src="https://files.playerduo.com/production/static-files/flag/1.png" class="flag flag-en" alt="PD"></div>
+                        </div>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+        <div class="mobile-input-search">
+            <div class="group-search">
+                <span class="search input-group">
+                    <input placeholder="Nickname/Url ..." type="text" class="form-control" value="">
+                    <span class="input-group-addon">
+                        <button type="button" class="btn btn-default"><i class="fa fa-search"
+                                aria-hidden="true"></i></button>
+                    </span>
+                </span>
+            </div>
+            <!-- <div class="link-mobile">
+                <li class="item active"><a href="/"><span>Thuê người chơi</span></a></li>
+                <li class="item false"><a href="/connect"><span>Kết nối</span></a></li>
+                <li class="item"><a data-bs-toggle="modal" data-bs-target="#rank" aria-hidden="true"><span>BXH</span></a></li>
+            </div> -->
+        </div>
+    </header>
+    <div class="wrapper">
+        <div class="setting__main row">
+            <div class="setting__main--menu col-lg-3 col-12">
+                <div class="menu">
+                    <div class="menu__setting  panel-group accordion accordion-flush">
+                        <div class="menu__setting--main panel panel-default accordion-item">
+                            <div id="flush-heading1" class="panel-heading">
+                                <div class="panel-title"><a data-bs-toggle="collapse" data-bs-target="#flush-collapse1" aria-expanded="false" aria-controls="flush-collapse1" class="collapsed" role="button" href="#">TÀI KHOẢN <i class="fas fa-chevron-right"></i><i class="fas fa-chevron-down"></i></a></div>
+                            </div>
+                            <div id="flush-collapse1" aria-labelledby="flush-heading1" class="accordion-collapse panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <div class="panel-group accordion accordion-flush">
+                                        <div class="menu__setting--sub panel panel-default">
+                                            <div class="panel-heading">
+                                                <div class="panel-title"><a href="./customer_info.html"><i class="fas fa-user-tie"></i> Thông tin cá nhân</a> </div>
+                                            </div>
+                                        </div>
+                                        <div class="menu__setting--sub panel panel-default">
+                                            <div class="panel-heading">
+                                                <div class="panel-title"><a href="./customer_static.html"><i class="fas fa-sliders-h"></i> Thống kê</a> </div>
+                                            </div>
+                                        </div>
+                                        <div class="menu__setting--sub panel panel-default accordion-item">
+                                            <div class="panel-heading" id="flush-heading12">
+                                                <div class="title-sub  panel-title">
+                                                    <a data-bs-toggle="collapse" data-bs-target="#flush-collapse12" aria-expanded="false" aria-controls="flush-collapse12" class="collapsed" role="button" href="#"><i class="fas fa-cog"></i> Cài đặt <i class="fas fa-chevron-right"></i><i class="fas fa-chevron-down"></i></a>
+                                                </div>
+                                            </div>
+                                            <div id="flush-collapse12" aria-labelledby="flush-heading12" class="accordion-collapse panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="panel-group">
+                                                        <div class="menu__setting--last panel panel-default">
+                                                            <div class="panel-heading">
+                                                                <div class="panel-title"><a href="./setting_email.html">Email</a></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="menu__setting--last panel panel-default">
+                                                            <div class="panel-heading">
+                                                                <div class="panel-title"><a href="./account_password.html">Tài khoản và mật khẩu</a></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="menu__setting--last panel panel-default">
+                                                            <div class="panel-heading">
+                                                                <div class="panel-title"><a href="./security.html">Khoá bảo vệ</a></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="menu__setting--last panel panel-default">
+                                                            <div class="panel-heading">
+                                                                <div class="panel-title"><a href="./vip.html">Vip</a></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="menu__setting--last panel panel-default">
+                                                            <div class="panel-heading">
+                                                                <div class="panel-title"><a href="./display.html">Hiển thị</a></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="menu__setting--sub panel panel-default accordion-item">
+                                            <div class="panel-heading" id="flush-heading13">
+                                                <div class="title-sub  panel-title"><a data-bs-toggle="collapse" data-bs-target="#flush-collapse13" aria-expanded="false" aria-controls="flush-collapse13" class="collapsed" role="button" href="#"><i class="fas fa-history"></i> Lịch sử giao dịch <i class="fas fa-chevron-right"></i><i class="fas fa-chevron-down"></i></a></div>
+                                            </div>
+                                            <div id="flush-collapse13" aria-labelledby="flush-heading13" class="accordion-collapse panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="panel-group">
+                                                        <div class="menu__setting--last panel panel-default">
+                                                            <div class="panel-heading">
+                                                                <div class="panel-title"><a href="./customer_history_donate.html">Lịch sử donate</a></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="menu__setting--last panel panel-default">
+                                                            <div class="panel-heading">
+                                                                <div class="panel-title"><a href="./customer_history_duo.html">Lịch sử duo</a></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="menu__setting--last panel panel-default">
+                                                            <div class="panel-heading">
+                                                                <div class="panel-title"><a href="./customer_history_create_code.html">Lịch sử tạo code</a></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="menu__setting--last panel panel-default">
+                                                            <div class="panel-heading">
+                                                                <div class="panel-title"><a href="./balance_fluctuation.html">Biến động số dư</a></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="menu__setting--last panel panel-default">
+                                                            <div class="panel-heading">
+                                                                <div class="panel-title"><a href="./customer_history_buy_card.html">Lịch sử mua thẻ</a></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="menu__setting--sub panel panel-default">
+                                            <div class="panel-heading">
+                                                <div class="panel-title"><a href="./customer_agency.html"><i class="fas fa-id-card"></i> Đại lý card</a> </div>
+                                            </div>
+                                        </div>
+                                        <div class="menu__setting--sub panel panel-default">
+                                            <div class="panel-heading">
+                                                <div class="panel-title"><a href="./customer_bank.html"><i class="fas fa-credit-card"></i> Thanh toán</a> </div>
+                                            </div>
+                                        </div>
+                                        <div class="menu__setting--sub panel panel-default">
+                                            <div class="panel-heading">
+                                                <div class="panel-title"><a href="./withdraw.html"><i class="fas fa-wallet"></i>  Ví</a> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu__setting--main panel panel-default accordion-item">
+                            <div id="flush-heading2" class="panel-heading">
+                                <div class="panel-title"><a data-bs-toggle="collapse" data-bs-target="#flush-collapse2" aria-expanded="false" aria-controls="flush-collapse2" role="button" href="#">TRANG CÁ NHÂN <i class="fas fa-chevron-right"></i><i class="fas fa-chevron-down"></i></a></div>
+                            </div>
+                            <div id="flush-collapse2" aria-labelledby="flush-heading2" class="accordion-collapse panel-collapse collapse show">
+                                <div class="panel-body">
+                                    <div class="panel-group accordion accordion-flush">
+                                        <div class="menu__setting--sub panel panel-default accordion-item">
+                                            <div class="panel-heading" id="flush-heading21">
+                                                <div class="title-sub  panel-title"><a data-bs-toggle="collapse" data-bs-target="#flush-collapse21" aria-expanded="false" aria-controls="flush-collapse21" class="collapsed" role="button" href="#"><i class="fas fa-tags"></i> Hashtags <i class="fas fa-chevron-right"></i><i class="fas fa-chevron-down"></i></a></div>
+                                            </div>
+                                            <div id="flush-collapse21" aria-labelledby="flush-heading21" class="accordion-collapse panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="panel-group">
+                                                        <div class="menu__setting--last panel panel-default">
+                                                            <div class="panel-heading">
+                                                                <div class="panel-title"><a href="./hashtag_content.html">Dành cho sáng tạo nội dung</a></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="menu__setting--sub panel panel-default accordion-item">
+                                            <div class="panel-heading" id="flush-heading22">
+                                                <div class="title-sub  panel-title"><a data-bs-toggle="collapse" data-bs-target="#flush-collapse22" aria-expanded="false" aria-controls="flush-collapse22" class="collapsed" role="button" href="#"><i class="fas fa-cog"></i> Cài đặt <i class="fas fa-chevron-right"></i><i class="fas fa-chevron-down"></i></a></div>
+                                            </div>
+                                            <div id="flush-collapse22" aria-labelledby="flush-heading22" class="accordion-collapse panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="panel-group">
+                                                        <div class="menu__setting--last panel panel-default">
+                                                            <div class="panel-heading">
+                                                                <div class="panel-title"><a href="./user_setting_url.html">Url</a></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="menu__setting--last panel panel-default">
+                                                            <div class="panel-heading">
+                                                                <div class="panel-title"><a href="./user_setting_info.html">Mạng xã hội</a></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="menu__setting--last panel panel-default">
+                                                            <div class="panel-heading">
+                                                                <div class="panel-title"><a href="./user_display.html">Hiển thị</a></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="menu__setting--sub panel panel-default accordion-item">
+                                            <div class="panel-heading" id="flush-heading23">
+                                                <div class="title-sub  panel-title"><a data-bs-toggle="collapse" data-bs-target="#flush-collapse23" aria-expanded="false" aria-controls="flush-collapse23" class="collapsed" role="button" href="#"><i class="fas fa-users"></i> Thành viên <i class="fas fa-chevron-right"></i><i class="fas fa-chevron-down"></i></a></div>
+                                            </div>
+                                            <div id="flush-collapse23" aria-labelledby="flush-heading23" class="accordion-collapse panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="panel-group">
+                                                        <div class="menu__setting--last panel panel-default">
+                                                            <div class="panel-heading">
+                                                                <div class="panel-title"><a href="./member_ship_level.html">Bậc</a></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="menu__setting--last panel panel-default">
+                                                            <div class="panel-heading">
+                                                                <div class="panel-title"><a href="./member_list.html">Danh sách thành viên</a></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="menu__setting--last panel panel-default">
+                                                            <div class="panel-heading">
+                                                                <div class="panel-title"><a href="./registed_history.html">Lịch sử đã đăng ký</a></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="menu__setting--sub panel panel-default accordion-item">
+                                            <div class="panel-heading" id="flush-heading24">
+                                                <div class="title-sub active  panel-title"><a data-bs-toggle="collapse" data-bs-target="#flush-collapse24" aria-expanded="false" aria-controls="flush-collapse24" role="button" href="#"><i class="far fa-dot-circle"></i> Mục tiêu <i class="fas fa-chevron-right"></i><i class="fas fa-chevron-down"></i></a></div>
+                                            </div>
+                                            <div id="flush-collapse24" aria-labelledby="flush-heading24" class="accordion-collapse panel-collapse collapse show">
+                                                <div class="panel-body">
+                                                    <div class="panel-group">
+                                                        <div class="menu__setting--last panel panel-default">
+                                                            <div class="panel-heading">
+                                                                <div class="panel-title active"><a href="./target_setting.html">Cài đặt</a></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="menu__setting--last panel panel-default">
+                                                            <div class="panel-heading">
+                                                                <div class="panel-title"><a href="./target_history.html">Lịch sử</a></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="menu__setting--sub panel panel-default">
+                                            <div class="panel-heading">
+                                                <div class="panel-title"><a href="./user_block_list.html"><i class="fas fa-ban"></i> Danh sách chặn comment </a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu__setting--main panel panel-default accordion-item">
+                            <div id="flush-heading3" class="panel-heading">
+                                <div class="panel-title"><a data-bs-toggle="collapse" data-bs-target="#flush-collapse3" aria-expanded="false" aria-controls="flush-collapse3" class="collapsed" role="button" href="#">VÍ ĐIỆN TỬ <i class="fas fa-chevron-right "></i><i class="fas fa-chevron-down "></i></a></div>
+                            </div>
+                            <div id="flush-collapse3" aria-labelledby="flush-heading3" class="accordion-collapse panel-collapse collapse">
+                                <div class="panel-body">
+                                    <div class="panel-group accordion accordion-flush">
+
+                                        <div class="menu__setting--sub panel panel-default accordion-item">
+                                            <div class="panel-heading" id="flush-heading31">
+                                                <div class="title-sub  panel-title"><a data-bs-toggle="collapse" data-bs-target="#flush-collapse31" aria-expanded="false" aria-controls="flush-collapse31" class="collapsed" role="button" href="#"><i class="fas fa-cog"></i> Cài đặt <i class="fas fa-chevron-right"></i><i class="fas fa-chevron-down"></i></a></div>
+                                            </div>
+                                            <div id="flush-collapse31" aria-labelledby="flush-heading31" class="accordion-collapse panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="panel-group">
+                                                        <div class="menu__setting--last panel panel-default">
+                                                            <div class="panel-heading">
+                                                                <div class="panel-title"><a href="./pay_info.html">Thông tin</a></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="menu__setting--last panel panel-default">
+                                                            <div class="panel-heading">
+                                                                <div class="panel-title"><a href="./pay_history.html">Lịch sử</a></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="menu__setting--sub panel panel-default accordion-item">
+                                            <div class="panel-heading ">
+                                                <div class=" panel-title "><a href="./link_pay.html"><i class="fas fa-link "></i> Link Pay </a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu__setting--main panel panel-default accordion-item">
+                            <div id="flush-heading4" class="panel-heading">
+                                <div class="panel-title"><a data-bs-toggle="collapse" data-bs-target="#flush-collapse4" aria-expanded="false " aria-controls="flush-collapse4" class="collapsed " role="button " href="# ">PLAYER <i class="fas fa-chevron-right "></i><i class="fas fa-chevron-down "></i></a></div>
+                            </div>
+                            <div id="flush-collapse4" aria-labelledby="flush-heading4" class="accordion-collapse panel-collapse collapse ">
+                                <div class="panel-body  accordion accordion-flush">
+                                    <div class="panel-group">
+                                        <div class="menu__setting--sub panel panel-default">
+                                            <div class="panel-heading">
+                                                <div class=" panel-title"><a href="./player_dashboard.html"><i class="fas fa-user-tie"></i> Tổng quan </a></div>
+                                            </div>
+                                        </div>
+                                        <div class="menu__setting--sub panel panel-default">
+                                            <div class="panel-heading">
+                                                <div class=" panel-title"><a href="./player_loyal_customer.html"><i class="fas fa-user-friends"></i> Khách hàng thân thiết </a></div>
+                                            </div>
+                                        </div>
+                                        <div class="menu__setting--sub panel panel-default accordion-item">
+                                            <div class="panel-heading" id="flush-heading41">
+                                                <div class="title-sub  panel-title"><a data-bs-toggle="collapse" data-bs-target="#flush-collapse41" aria-expanded="false" aria-controls="flush-collapse41" class="collapsed" role="button" href="#"><i class="fas fa-cog"></i> Cài đặt <i class="fas fa-chevron-right"></i><i class="fas fa-chevron-down"></i></a></div>
+                                            </div>
+                                            <div id="flush-collapse41" aria-labelledby="flush-heading41" class="accordion-collapse panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="panel-group">
+                                                        <div class="menu__setting--last panel panel-default">
+                                                            <div class="panel-heading">
+                                                                <div class="panel-title"><a href="./player_setting_url.html">Url</a></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="menu__setting--last panel panel-default">
+                                                            <div class="panel-heading">
+                                                                <div class="panel-title"><a href="./player_setting_info.html">Thông tin Player</a></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="menu__setting--last panel panel-default">
+                                                            <div class="panel-heading">
+                                                                <div class="panel-title"><a href="./player_setting_albums.html">Albums Player</a></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="menu__setting--last panel panel-default">
+                                                            <div class="panel-heading">
+                                                                <div class="panel-title"><a href="./player_setting_duo.html">Cài đặt Duo</a></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="menu__setting--last panel panel-default">
+                                                            <div class="panel-heading">
+                                                                <div class="panel-title"><a href="./player_setting_different.html">Khác</a></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="menu__setting--sub panel panel-default accordion-item">
+                                            <div class="panel-heading" id="flush-heading42">
+                                                <div class="title-sub  panel-title"><a data-bs-toggle="collapse" data-bs-target="#flush-collapse42" aria-expanded="false" aria-controls="flush-collapse42" class="collapsed" role="button" href="#"><i class="far fa-calendar-alt "></i> Lịch sử nhận Duo, Donate <i class="fas fa-chevron-right"></i><i class="fas fa-chevron-down"></i></a></div>
+                                            </div>
+                                            <div id="flush-collapse42" aria-labelledby="flush-heading42" class="accordion-collapse panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="panel-group">
+                                                        <div class="menu__setting--last panel panel-default">
+                                                            <div class="panel-heading">
+                                                                <div class="panel-title"><a href="./player_history_duo.html">Lịch sử nhận duo</a></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="menu__setting--last panel panel-default">
+                                                            <div class="panel-heading">
+                                                                <div class="panel-title"><a href="./player_history_donate.html">Lịch sử nhận donate</a></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="menu__setting--sub panel panel-default">
+                                            <div class="panel-heading">
+                                                <div class=" panel-title"><a href="./player_block_list.html"><i class="fas fa-ban"></i> Danh sách chặn User </a></div>
+                                            </div>
+                                        </div>
+                                        <div class="menu__setting--sub panel panel-default">
+                                            <div class="panel-heading">
+                                                <div class=" panel-title"><a href="./player_guide.html"><i class="fas fa-book"></i> Hướng Dẫn Player </a></div>
+                                            </div>
+                                        </div>
+                                        <div class="menu__setting--sub panel panel-default">
+                                            <div class="panel-heading">
+                                                <div class=" panel-title"><a href="./link_player.html"><i class="fas fa-link"></i> Link Player </a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu__setting--main panel panel-default accordion-item">
+                            <div id="flush-heading5" class="panel-heading">
+                                <div class="panel-title"><a data-bs-toggle="collapse" data-bs-target="#flush-collapse5" aria-expanded="false" aria-controls="flush-collapse5" class="collapsed" role="button" href="#">DONATE <i class="fas fa-chevron-right"></i><i class="fas fa-chevron-down"></i></a></div>
+                            </div>
+                            <div id="flush-collapse5" aria-labelledby="flush-heading5" class="accordion-collapse panel-collapse collapse">
+                                <div class="panel-body">
+                                    <div class="panel-group">
+                                        <div class="menu__setting--sub panel panel-default">
+                                            <div class="panel-heading">
+                                                <div class=" panel-title"><a href="./customer_info.html"><i class="fas fa-cog"></i> Cài đặt </a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-drawer-setting visible-xs d-none"><i class="fas fa-chevron-right"></i></div>
+                </div>
+            </div>
+            <div class="col-lg-9 col-12">
+                <div class="aside">
+                    <h3>Cài đặt mục tiêu</h3>
+                    <hr>
+                    <div class="show-grid mb-3 row">
+                        <div class="col-md-6 col-xs-6">
+                            <h5>Bật mục tiêu</h5>
+                        </div>
+                        <div class="col-md-6 col-xs-6">
+                            <div style="position: relative; display: inline-block; text-align: left; opacity: 1; border-radius: 14px; transition: opacity 0.25s ease 0s; touch-action: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); user-select: none;">
+                                <div class="react-switch-bg" style="height: 28px; width: 56px; margin: 0px; position: relative; background: rgb(136, 136, 136); border-radius: 14px; cursor: pointer; transition: background 0.25s ease 0s;">
+                                    <div style="height: 28px; width: 30px; position: relative; opacity: 0; pointer-events: none; transition: opacity 0.25s ease 0s;"><svg height="100%" width="100%" viewBox="-2 -5 17 21" style="position: absolute; top: 0px;"><path d="M11.264 0L5.26 6.004 2.103 2.847 0 4.95l5.26 5.26 8.108-8.107L11.264 0" fill="#fff" fill-rule="evenodd"></path></svg></div>
+                                    <div style="height: 28px; width: 30px; position: absolute; opacity: 1; right: 0px; top: 0px; pointer-events: none; transition: opacity 0.25s ease 0s;"><svg viewBox="-2 -5 14 20" height="100%" width="100%" style="position: absolute; top: 0px;"><path d="M9.9 2.12L7.78 0 4.95 2.828 2.12 0 0 2.12l2.83 2.83L0 7.776 2.123 9.9 4.95 7.07 7.78 9.9 9.9 7.776 7.072 4.95 9.9 2.12" fill="#fff" fill-rule="evenodd"></path></svg></div>
+                                </div>
+                                <div class="react-switch-handle" role="checkbox" tabindex="0" aria-disabled="false" style="height: 26px; width: 26px; background: rgb(255, 255, 255); cursor: pointer; display: inline-block; border-radius: 50%; position: absolute; transform: translateX(1px); top: 1px; outline: 0px; border: 0px; transition: background-color 0.25s ease 0s, transform 0.25s ease 0s, box-shadow 0.15s ease 0s;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user-target-form row">
+                        <div class="col-md-6 col-xs-12">
+                            <div class="fieldGroup ">
+                                <p class="control-label">Tiêu đề</p><input type="text" name="title" placeholder="" maxlength="255" autocomplete="false" value=""></div>
+                            <div class="fieldGroup ">
+                                <p class="control-label">Link bài viết</p><input type="text" name="link" placeholder="" maxlength="5000" autocomplete="false" value=""></div><label>Hiện tại (<span>RESET</span>)</label>
+                            <div class="fieldGroup "><input type="text" name="currentValue" placeholder="" disabled="" maxlength="5000" autocomplete="false" value="0"></div>
+                            <div class="fieldGroup ">
+                                <p class="control-label">Mục tiêu</p><input type="text" name="totalMoney" placeholder="" maxlength="5000" autocomplete="false" value=""></div>
+                            <hr><button type="button" class="btn-update">Tạo mục tiêu</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Nạp tiền player duo -->
+    <div class="recharge-modal modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-center text-uppercase" id="staticBackdropLabel">NẠP TIỀN VÀO PLAYER DUO
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="accordion-controlled-example" role="tablist" class="panel-group accordion">
+                        <div class="accordion-item">
+                            <div role="tab" id="headingOne" class="panel-heading accordion-header">
+                                <div class="panel-title">
+                                    <a href="#" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <div class="option d-flex"><img src="https://files.playerduo.com/production/static-files/icon/bank.png" alt="PD" class="option-icon img-rounded">
+                                            <div class="option-title">
+                                                <p><span>Chuyển khoản qua ngân hàng</span><span class="cl-red">(Khuyến
+                                                        nghị )</span></p>
+                                                <p><span>Miễn phí. Hỗ trợ từ 8:30 đến 22:00 hàng ngày (Trừ chủ nhật và
+                                                        các ngày lễ)</span></p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordion-controlled-example">
+                                <div class="accordion-body option-content panel-body">
+                                    <div class="Bank__Recharge--list">
+                                        <div class="row">
+                                            <div class="col-md-3 col-xs-6">
+                                                <div class="item-bank "><img src="https://playerduo-data.sgp1.cdn.digitaloceanspaces.com/production/static-files/bank/vietcombank.png" class="" alt="https://playerduo-data.sgp1.cdn.digitaloceanspaces.com/production/static-files/bank/vietcombank.png"></div>
+                                            </div>
+                                            <div class="col-md-3 col-xs-6">
+                                                <div class="item-bank "><img src="https://playerduo-data.sgp1.cdn.digitaloceanspaces.com/production/static-files/bank/viettinbank.png" class="" alt="https://playerduo-data.sgp1.cdn.digitaloceanspaces.com/production/static-files/bank/viettinbank.png"></div>
+                                            </div>
+                                            <div class="col-md-3 col-xs-6">
+                                                <div class="item-bank "><img src="https://playerduo-data.sgp1.cdn.digitaloceanspaces.com/production/static-files/bank/techcombank.png" class="" alt="https://playerduo-data.sgp1.cdn.digitaloceanspaces.com/production/static-files/bank/techcombank.png"></div>
+                                            </div>
+                                        </div><br>
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <form>
+                                                    <div class="fieldGroup "><input type="text" name="amount" placeholder="Số tiền muốn nạp (VND)" maxlength="5000" autocomplete="false" value=""></div>
+                                                    <p class="text-center"><button type="submit" class="btn btn-success">Nạp tiền</button></p>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="Bank__Recharge--submit">
+                                        <div class="sub-info">
+                                            <p><span>* Hỗ trợ từ 8:30 đến 22:00 hằng ngày (Trừ CN)</span></p>
+                                            <p><span>* Nếu bạn có vấn đê cần hỗ trợ:</span> <a href="https://www.facebook.com/playerduo/" target="_blank" rel="noopener noreferrer"><span>Chat ngay</span></a></p>
+                                        </div>
+                                        <div class="sub-form">
+                                            <div class="fieldGroup "><input type="text" name="code" placeholder="Mã nạp tiền" maxlength="5000" autocomplete="false" value=""></div>
+                                            <div class="btn__fill"><button disabled="" type="button" class="pull-right btn btn-danger"><span>Thông báo</span></button></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div role="tab" id="heading3" class="panel-heading accordion-header">
+                                <div class="panel-title">
+                                    <a href="#" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="true" aria-controls="collapse3">
+                                        <div class="option d-flex"><img src="https://files.playerduo.com/production/static-files/icon/player-card.png" alt="PD" class="option-icon img-rounded">
+                                            <div class="option-title">
+                                                <p><span>Nạp tiền bằng thẻ cào Player Code</span></p>
+                                                <p><span>Player Code</span></p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordion-controlled-example">
+                                <div class="accordion-body option-content panel-body">
+                                    <div>
+                                        <div>
+                                            <ul class="row">
+                                                <li class="col-sm-4 position-relative">
+                                                    <div class="type-card-playercode"><img src="https://files.playerduo.com/production/static-files/card/playercode.png" alt="PD" class="img-thumbnail"><span class="discount-card">-10%</span></div>
+                                                </li>
+                                            </ul>
+                                            <p><a href="https://playerduo.com/partner" rel="noopener noreferrer" target="_blank"><i class="fas fa-map-marker-alt"></i>&nbsp;<span>Xem nơi bán Player Code gần bạn</span></a>.</p>
+                                            <hr>
+                                            <form class="card pd-code">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <div class="fieldGroup "><input type="text" name="seriesNumber" placeholder="" maxlength="255" autocomplete="false" value=""></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <div class="fieldGroup "><input type="text" name="cardNumber" placeholder="" maxlength="255" autocomplete="false" value=""></div>
+                                                        </div>
+                                                    </div><i class="fas fa-minus common__space"></i></div>
+                                                <div class="recaptcha">
+                                                    <div id="pc" class="g-recaptcha" data-sitekey="6LfJeF8UAAAAAN5D0Ylx8PQAeYjmEHR4G2hY9pdb" data-theme="light" data-type="image" data-size="normal" data-badge="bottomright" data-tabindex="0">
+                                                        <div style="width: 304px; height: 78px;">
+                                                            <div><iframe title="reCAPTCHA" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LfJeF8UAAAAAN5D0Ylx8PQAeYjmEHR4G2hY9pdb&amp;co=aHR0cHM6Ly9wbGF5ZXJkdW8uY29tOjQ0Mw..&amp;hl=vi&amp;type=image&amp;v=2uoiJ4hP3NUoP9v_eBNfU6CR&amp;theme=light&amp;size=normal&amp;badge=bottomright&amp;cb=2eu9kzqz6qmp"
+                                                                    width="304" height="78" role="presentation" name="a-1iutqbfswf0a" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div>
+                                                            <textarea id="g-recaptcha-response-4" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="text-center"><button type="submit" class="btn btn-success"><span>Nạp tiền</span></button></p>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div role="tab" id="heading4" class="panel-heading accordion-header">
+                                <div class="panel-title">
+                                    <a href="#" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="true" aria-controls="collapse4">
+                                        <div class="option d-flex"><img src="https://files.playerduo.com/production/static-files/icon/mobile-card.png" alt="PD" class="option-icon img-rounded">
+                                            <div class="option-title">
+                                                <p><span>Nạp tiền bằng thẻ cào điện thoại</span></p>
+                                                <p><span>Mobile Card</span></p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordion-controlled-example">
+                                <div class="accordion-body option-content panel-body">
+                                    <div>
+                                        <div>
+                                            <ul class="row">
+                                                <li class="col-sm-4">
+                                                    <div class="type-card-mobile card--active"><img src="https://files.playerduo.com/production/static-files/card/viettel.png" alt="PD" class="img-thumbnail"><span class="discount-mobile">-35%</span></div>
+                                                </li>
+                                                <li class="col-sm-4">
+                                                    <div class="type-card-mobile"><img src="https://files.playerduo.com/production/static-files/card/mobiphone.png" alt="PD" class="img-thumbnail"><span class="discount-mobile">-35%</span></div>
+                                                </li>
+                                                <li class="col-sm-4">
+                                                    <div class="type-card-mobile"><img src="https://files.playerduo.com/production/static-files/card/vinaphone.png" alt="PD" class="img-thumbnail"><span class="discount-mobile">-35%</span></div>
+                                                </li>
+                                            </ul>
+                                            <hr>
+                                            <div class="bg-warning"><span>Vui lòng chọn đúng mệnh giá thẻ, nếu chọn sai mệnh giá sẽ bị trừ 50% giá trị thẻ.</span></div>
+                                            <form class="card">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <div class="fieldGroup">
+                                                                <p class="control-label"><span>Mệnh giá thẻ:</span></p><select class="form-control" name="moneyNumber"><option value="">Vui lòng chọn</option><option value="10000">10,000đ (-35%)</option><option value="20000">20,000đ (-35%)</option><option value="50000">50,000đ (-35%)</option><option value="100000">100,000đ (-35%)</option><option value="200000">200,000đ (-35%)</option><option value="500000">500,000đ (-35%)</option></select></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <div class="fieldGroup ">
+                                                                <p class="control-label"><span>Số series:</span></p><input type="text" name="mobileSeri" placeholder="" maxlength="5000" autocomplete="false" value=""></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <div class="fieldGroup ">
+                                                                <p class="control-label"><span>Mã thẻ:</span></p><input type="text" name="mobileCardNumber" placeholder="" maxlength="5000" autocomplete="false" value=""></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="recaptcha">
+                                                    <div id="mc" class="g-recaptcha" data-sitekey="6LfJeF8UAAAAAN5D0Ylx8PQAeYjmEHR4G2hY9pdb" data-theme="light" data-type="image" data-size="normal" data-badge="bottomright" data-tabindex="0">
+                                                        <div style="width: 304px; height: 78px;">
+                                                            <div><iframe title="reCAPTCHA" src="https://www.google.com/recaptcha/api2/anchor?ar=2&amp;k=6LfJeF8UAAAAAN5D0Ylx8PQAeYjmEHR4G2hY9pdb&amp;co=aHR0cHM6Ly9wbGF5ZXJkdW8uY29tOjQ0Mw..&amp;hl=vi&amp;type=image&amp;v=2uoiJ4hP3NUoP9v_eBNfU6CR&amp;theme=light&amp;size=normal&amp;badge=bottomright&amp;cb=mnqbztqamlyw"
+                                                                    width="304" height="78" role="presentation" name="a-ajhz6twbnr8t" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div>
+                                                            <textarea id="g-recaptcha-response-5" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
+                                                        </div><iframe style="display: none;"></iframe></div>
+                                                </div>
+                                                <p class="text-center"><button type="submit" class="btn btn-success"><span>Nạp tiền</span></button></p>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div role="tab" id="heading5" class="panel-heading accordion-header">
+                                <div class="panel-title">
+                                    <a href="#" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="true" aria-controls="collapse5">
+                                        <div class="option d-flex"><img src="https://files.playerduo.com/production/static-files/icon/atm-card.png" alt="PD" class="option-icon img-rounded">
+                                            <div class="option-title">
+                                                <p><span>Thanh toán trực tiếp qua Internet Banking.</span></p>
+                                                <p><span>Phí 1.760đ + 3% giá trị nạp</span></p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#accordion-controlled-example">
+                                <div class="accordion-body option-content panel-body">
+                                    <div>
+                                        <div>
+                                            <div class="bank-list  row">
+                                                <div class="bank col-md-2 col-xs-3"><img src="https://cdn.baokim.vn/public/uploads/banks/1.png" alt="PD" class="img-thumbnail"></div>
+                                                <div class="bank col-md-2 col-xs-3"><img src="https://cdn.baokim.vn/public/uploads/banks/116.png" alt="PD" class="img-thumbnail"></div>
+                                                <div class="bank col-md-2 col-xs-3"><img src="https://cdn.baokim.vn/public/uploads/banks/173.png" alt="PD" class="img-thumbnail"></div>
+                                                <div class="bank col-md-2 col-xs-3"><img src="https://cdn.baokim.vn/public/uploads/banks/174.png" alt="PD" class="img-thumbnail"></div>
+                                                <div class="bank col-md-2 col-xs-3"><img src="https://cdn.baokim.vn/public/uploads/banks/175.png" alt="PD" class="img-thumbnail"></div>
+                                                <div class="bank col-md-2 col-xs-3"><img src="https://cdn.baokim.vn/public/uploads/banks/176.png" alt="PD" class="img-thumbnail"></div>
+                                                <div class="bank col-md-2 col-xs-3"><img src="https://cdn.baokim.vn/public/uploads/banks/177.png" alt="PD" class="img-thumbnail"></div>
+                                                <div class="bank col-md-2 col-xs-3"><img src="https://cdn.baokim.vn/public/uploads/banks/178.png" alt="PD" class="img-thumbnail"></div>
+                                                <div class="bank col-md-2 col-xs-3"><img src="https://cdn.baokim.vn/public/uploads/banks/179.png" alt="PD" class="img-thumbnail"></div>
+                                                <div class="bank col-md-2 col-xs-3"><img src="https://cdn.baokim.vn/public/uploads/banks/168.png" alt="PD" class="img-thumbnail"></div>
+                                                <div class="bank col-md-2 col-xs-3"><img src="https://cdn.baokim.vn/public/uploads/banks/180.png" alt="PD" class="img-thumbnail"></div>
+                                                <div class="bank col-md-2 col-xs-3"><img src="https://cdn.baokim.vn/public/uploads/banks/127.png" alt="PD" class="img-thumbnail"></div>
+                                                <div class="bank col-md-2 col-xs-3"><img src="https://cdn.baokim.vn/public/uploads/banks/87.png" alt="PD" class="img-thumbnail"></div>
+                                                <div class="bank col-md-2 col-xs-3"><img src="https://cdn.baokim.vn/public/uploads/banks/84.png" alt="PD" class="img-thumbnail"></div>
+                                                <div class="bank col-md-2 col-xs-3"><img src="https://cdn.baokim.vn/public/uploads/banks/83.png" alt="PD" class="img-thumbnail"></div>
+                                                <div class="bank col-md-2 col-xs-3"><img src="https://cdn.baokim.vn/public/uploads/banks/108.png" alt="PD" class="img-thumbnail"></div>
+                                                <div class="bank col-md-2 col-xs-3"><img src="https://cdn.baokim.vn/public/uploads/banks/95.png" alt="PD" class="img-thumbnail"></div>
+                                                <div class="bank col-md-2 col-xs-3"><img src="https://cdn.baokim.vn/public/uploads/banks/81.png" alt="PD" class="img-thumbnail"></div>
+                                                <div class="bank col-md-2 col-xs-3"><img src="https://cdn.baokim.vn/public/uploads/banks/121.png" alt="PD" class="img-thumbnail"></div>
+                                                <div class="bank col-md-2 col-xs-3"><img src="https://cdn.baokim.vn/public/uploads/banks/136.png" alt="PD" class="img-thumbnail"></div>
+                                                <div class="bank col-md-2 col-xs-3"><img src="https://cdn.baokim.vn/public/uploads/banks/117.png" alt="PD" class="img-thumbnail"></div>
+                                                <div class="bank col-md-2 col-xs-3"><img src="https://cdn.baokim.vn/public/uploads/banks/110.png" alt="PD" class="img-thumbnail"></div>
+                                                <div class="bank col-md-2 col-xs-3"><img src="https://cdn.baokim.vn/public/uploads/banks/82.png" alt="PD" class="img-thumbnail"></div>
+                                                <div class="bank col-md-2 col-xs-3"><img src="https://cdn.baokim.vn/public/uploads/banks/113.png" alt="PD" class="img-thumbnail"></div>
+                                                <div class="bank col-md-2 col-xs-3"><img src="https://cdn.baokim.vn/public/uploads/banks/99.png" alt="PD" class="img-thumbnail"></div>
+                                                <div class="bank col-md-2 col-xs-3"><img src="https://cdn.baokim.vn/public/uploads/banks/114.png" alt="PD" class="img-thumbnail"></div>
+                                                <div class="bank col-md-2 col-xs-3"><img src="https://cdn.baokim.vn/public/uploads/banks/105.png" alt="PD" class="img-thumbnail"></div>
+                                                <div class="bank col-md-2 col-xs-3"><img src="https://cdn.baokim.vn/public/uploads/banks/135.png" alt="PD" class="img-thumbnail"></div>
+                                                <div class="bank col-md-2 col-xs-3"><img src="https://cdn.baokim.vn/public/uploads/banks/120.png" alt="PD" class="img-thumbnail"></div>
+                                                <div class="bank col-md-2 col-xs-3"><img src="https://cdn.baokim.vn/public/uploads/banks/163.png" alt="PD" class="img-thumbnail"></div>
+                                                <div class="bank col-md-2 col-xs-3"><img src="https://cdn.baokim.vn/public/uploads/banks/107.png" alt="PD" class="img-thumbnail"></div>
+                                                <div class="bank col-md-2 col-xs-3"><img src="https://cdn.baokim.vn/public/uploads/banks/94.png" alt="PD" class="img-thumbnail"></div>
+                                                <div class="bank col-md-2 col-xs-3"><img src="https://cdn.baokim.vn/public/uploads/banks/106.png" alt="PD" class="img-thumbnail"></div>
+                                                <div class="bank col-md-2 col-xs-3"><img src="https://cdn.baokim.vn/public/uploads/banks/111.png" alt="PD" class="img-thumbnail"></div>
+                                                <div class="bank col-md-2 col-xs-3"><img src="https://cdn.baokim.vn/public/uploads/banks/164.png" alt="PD" class="img-thumbnail"></div>
+                                                <div class="bank col-md-2 col-xs-3"><img src="https://cdn.baokim.vn/public/uploads/banks/129.png" alt="PD" class="img-thumbnail"></div>
+                                                <div class="bank col-md-2 col-xs-3"><img src="https://cdn.baokim.vn/public/uploads/banks/101.png" alt="PD" class="img-thumbnail"></div>
+                                                <div class="bank col-md-2 col-xs-3"><img src="https://cdn.baokim.vn/public/uploads/banks/131.png" alt="PD" class="img-thumbnail"></div>
+                                                <div class="bank col-md-2 col-xs-3"><img src="https://cdn.baokim.vn/public/uploads/banks/166.png" alt="PD" class="img-thumbnail"></div>
+                                                <div class="bank col-md-2 col-xs-3"><img src="https://cdn.baokim.vn/public/uploads/banks/134.png" alt="PD" class="img-thumbnail"></div>
+                                                <div class="bank col-md-2 col-xs-3"><img src="https://cdn.baokim.vn/public/uploads/banks/124.png" alt="PD" class="img-thumbnail"></div>
+                                            </div>
+                                            <div class="form-recharge hide-form-recharge row">
+                                                <div class="col-xs-12"><button type="button" class="btn btn-sm btn-primary"><i class="fa fa-chevron-left" aria-hidden="true"></i><span>Chọn lại</span></button>
+                                                    <p></p>
+                                                    <form>
+                                                        <div class="fieldGroup "><input type="text" name="amount" placeholder="Số tiền muốn nạp (VND)" maxlength="5000" autocomplete="false" value=""></div>
+                                                        <p class="text-center"><button type="submit" class="btn btn-success"><span>Nạp tiền</span></button></p>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div role="tab" id="headingTwo" class="panel-heading accordion-header">
+                                <div class="panel-title">
+                                    <a href="#" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                        <div class="option d-flex"><img src="https://files.playerduo.com/production/static-files/icon/qr_code.png" alt="PD" class="option-icon img-rounded">
+                                            <div class="option-title">
+                                                <p><span>Thanh toán trực tiếp qua QR Code</span></p>
+                                                <p><span>Phí 3% giá trị nạp</span></p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordion-controlled-example">
+                                <div class="accordion-body option-content panel-body">
+                                    <div>
+                                        <div class="form-recharge row">
+                                            <div class="col-xs-12">
+                                                <form>
+                                                    <div class="fieldGroup "><input type="text" name="amount" placeholder="Số tiền muốn nạp (VND)" maxlength="5000" autocomplete="false" value=""></div>
+                                                    <p class="text-center"><button type="submit" class="btn btn-success"><span>Nạp tiền</span></button></p>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div role="tab" id="heading2" class="panel-heading accordion-header">
+                                <div class="panel-title">
+                                    <a href="#" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
+                                        <div class="option d-flex"><img src="https://files.playerduo.com/production/static-files/icon/paypal.png" alt="PD" class="option-icon img-rounded">
+                                            <div class="option-title">
+                                                <p><span>Thanh toán qua Paypal</span>.</p>
+                                                <p><span>Phí tùy vào đại lý</span></p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#accordion-controlled-example">
+                                <div class="accordion-body option-content panel-body">
+                                    <p><span>Danh sách đại lý bán Player Code qua Paypal</span>:</p>
+                                    <p><a href="https://www.facebook.com/moonho93" rel="noopener noreferrer" target="_blank">Hồ Như Nguyệt</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="close-btn btn btn-default" data-bs-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bảng xếp hạng -->
+    <div class="modal fade rank-modal" id="rank" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="rankLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-center text-uppercase" id="rankLabel">BẢNG XẾP HẠNG ĐẠI GIA
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav rank-modal-tab mb-3 justify-content-center" id="pills-tab1" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active" id="pills-home-tab1" data-bs-toggle="pill" data-bs-target="#pills-home1" role="tab" aria-controls="pills-home1" aria-selected="true"><span>Hôm nay</span></a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="pills-profile-tab2" data-bs-toggle="pill" data-bs-target="#pills-profile1" role="tab" aria-controls="pills-profile1" aria-selected="false"><span>7 ngày qua</span></a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="pills-contact-tab3" data-bs-toggle="pill" data-bs-target="#pills-contact1" role="tab" aria-controls="pills-contact1" aria-selected="false"><span>30 ngày qua</span></a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="pills-tab1Content">
+                        <div class="tab-pane fade show active" id="pills-home1" role="tabpanel" aria-labelledby="pills-home-tab1">
+                            <div class="mt-5">
+                                <div class="top-info-section"><img src="https://playerduo.com/api/upload-service/images/13d6afc5-2cfb-4247-b041-952a7b929582__131d2c70-5fae-11ec-ba40-b5b607f164e2__page_avatar.jpg" class="" alt="top donate"><img src="https://files.playerduo.com/production/static-files/no1_top_list.png"
+                                        class="background-top1" alt="s">
+                                    <p style="margin-top: 25px;"><span><a href="/page5ff8cea655977e2f46a923cb"
+                                                target="_blank" rel="noopener noreferrer"
+                                                style="font-weight: bold;">Hào Nguyễn </a></span></p>
+                                    <p style="font-weight: bold;">15,000,000 đ</p>
+                                </div>
+                                <ul class="rank-list">
+                                    <li>
+                                        <div class="rank-list__info">
+                                            <p class="rank-list__index" style="width: 25px;">#10</p>
+                                            <div class="avt avt-xs"><img src="https://playerduo.com/api/upload-service/images/284e5176-8514-4d30-ab17-9ebb5c3acfc4__a6793ab0-31e4-11ec-851f-6161af46f080__page_avatar.jpg" class="avt-img" alt="PD"><img src="https://files.playerduo.com/production/images/new-rankvip/10.png"
+                                                    class="vip-avatar undefined" alt="PD" style="height: 17px; width: 17px;"></div>
+                                            <p class="name-player-review color-vip-1">Văn Mít </p>
+                                        </div>
+                                        <p class="rank-list__money" style="margin-right: 0px;">45,665,000 đ</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-profile1" role="tabpanel" aria-labelledby="pills-profile-tab2">
+                            <div class="mt-5">
+                                <div class="top-info-section"><img src="https://playerduo.com/api/upload-service/images/8bc40fcc-b016-45c7-8233-26fa4f55fc4e__ece7fa20-a83d-11ec-ba40-b5b607f164e2__page_avatar.jpg" class="" alt="top donate"><img src="https://files.playerduo.com/production/static-files/no1_top_list.png"
+                                        class="background-top1" alt="s">
+                                    <p style="margin-top: 25px;"><span><a href="/page60f2f84a10abd358da162c70"
+                                                target="_blank" rel="noopener noreferrer"
+                                                style="font-weight: bold;">✨KEM•KHUM•TỆ 👌 </a></span></p>
+                                    <p style="font-weight: bold;">32,568,000 đ</p>
+                                </div>
+                                <ul class="rank-list">
+                                    <li>
+                                        <div class="rank-list__info">
+                                            <p class="rank-list__index" style="width: 25px;">#10</p>
+                                            <div class="avt avt-xs"><img src="https://playerduo.com/api/upload-service/images/284e5176-8514-4d30-ab17-9ebb5c3acfc4__a6793ab0-31e4-11ec-851f-6161af46f080__page_avatar.jpg" class="avt-img" alt="PD"><img src="https://files.playerduo.com/production/images/new-rankvip/10.png"
+                                                    class="vip-avatar undefined" alt="PD" style="height: 17px; width: 17px;"></div>
+                                            <p class="name-player-review color-vip-1">Văn Mít </p>
+                                        </div>
+                                        <p class="rank-list__money" style="margin-right: 0px;">45,665,000 đ</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-contact1" role="tabpanel" aria-labelledby="pills-contact-tab3">
+                            <div class="mt-5">
+                                <div class="top-info-section"><img src="https://playerduo.com/api/upload-service/images/11c77d6b-ddbc-47b4-bd07-4a0531e4a236__8e58ac60-92b3-11ec-ba40-b5b607f164e2__page_avatar.jpg" class="" alt="top donate"><img src="https://files.playerduo.com/production/static-files/no1_top_list.png"
+                                        class="background-top1" alt="s">
+                                    <p style="margin-top: 25px;"><span><a href="/hiencute1" target="_blank"
+                                                rel="noopener noreferrer" style="font-weight: bold;">Neih1 </a></span>
+                                    </p>
+                                    <p style="font-weight: bold;">255,849,000 đ</p>
+                                </div>
+                                <ul class="rank-list">
+                                    <li>
+                                        <div class="rank-list__info">
+                                            <p class="rank-list__index" style="width: 25px;">#10</p>
+                                            <div class="avt avt-xs"><img src="https://playerduo.com/api/upload-service/images/284e5176-8514-4d30-ab17-9ebb5c3acfc4__a6793ab0-31e4-11ec-851f-6161af46f080__page_avatar.jpg" class="avt-img" alt="PD"><img src="https://files.playerduo.com/production/images/new-rankvip/10.png"
+                                                    class="vip-avatar undefined" alt="PD" style="height: 17px; width: 17px;"></div>
+                                            <p class="name-player-review color-vip-1">Văn Mít </p>
+                                        </div>
+                                        <p class="rank-list__money" style="margin-right: 0px;">45,665,000 đ</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger"><span>Bảng xếp hạng đại gia</span></button>
+                    <button type="button" class="btn btn-default"><span>Bảng xếp hạng thu nhập</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./js/jquery-3.6.0.min.js "></script>
+<script src="./js/bootstrap.bundle.min.js "></script>
+<script src="./js/popper.min.js "></script>
+<script src=".js/bootstrap.min.js "></script>
+<script>
+    var header = $('header.menu__header');
+    $(window).scroll(function() {
+        if ($(window).scrollTop() > 200) {
+            header.addClass('fix-menu')
+        } else {
+            header.removeClass('fix-menu')
+        }
+    });
+    $('.navbar-right .mobile-search').click(function() {
+        $('.menu__header .mobile-input-search').toggleClass("d-block ");
+    });
+    $('.setting__main--menu .btn-drawer-setting').click(function() {
+        $('.setting__main--menu .menu__setting').toggleClass("drawer");
+        $('.setting__main--menu .btn-drawer-setting i').toggleClass("fa-chevron-right");
+        $('.setting__main--menu .btn-drawer-setting i').toggleClass("fa-chevron-left");
+    });
+</script>
+
+</html>

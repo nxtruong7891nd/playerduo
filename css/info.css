@@ -1,0 +1,463 @@
+.player-infomation .player-profile {
+    padding: 30px 30px 0 0;
+    text-align: center;
+}
+
+.player-infomation .player-profile .player-avt {
+    position: relative;
+    overflow: hidden;
+}
+
+.player-infomation .player-profile .player-avt img {
+    border-radius: 7px;
+}
+
+.player-infomation .player-profile .player-avt .sound-player {
+    position: absolute;
+    bottom: 15px;
+    left: 25px;
+    background-color: #f0564a;
+    color: #fff;
+    border-radius: 50%;
+    padding: 6px 10px 4px;
+    font-size: 14px;
+}
+
+.player-infomation .player-profile .rent-time-wrap {
+    margin-top: 20px;
+}
+
+.rent-time-wrap p {
+    height: 23px;
+    font-size: 18px;
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    margin: 0;
+}
+
+.player-infomation .player-profile .rent-time-wrap .ready {
+    color: #27ae60;
+}
+
+.social-icon {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.icon-wrap.facebook {
+    padding: 8px 5px 5px;
+    margin: 0 5px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #4267b2;
+}
+
+.icon-wrap.facebook i {
+    color: #fff;
+    font-size: 17px;
+}
+
+.player-profile-main-wrap {
+    padding: 30px 0!important;
+    min-height: 100vh;
+}
+
+.player-profile .member-since {
+    margin-top: 20px;
+}
+
+.player-profile .member-since span {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: -.1px;
+    font-size: 12px;
+}
+
+.player-profile .member-since span:first-child {
+    color: #9298a1;
+    margin-right: 5px;
+}
+
+.player-profile .member-since span:last-child {
+    color: #354052;
+}
+
+.player-profile .ui-category {
+    margin-top: 30px;
+    position: relative;
+    height: 20px;
+    margin-bottom: 15px;
+}
+
+.ui-category .border-category {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    bottom: 4px;
+    left: 0;
+    border-bottom: 1px solid #e2e6ea;
+}
+
+.ui-category .title-category {
+    padding-right: 0;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #f0564a;
+    position: absolute;
+    bottom: 5px;
+}
+
+.ui-category .title-category span {
+    padding-right: 15px;
+}
+
+.table-achievement tr td:first-child {
+    text-align: left;
+    font-size: 15px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    color: #354052;
+    padding: 10px 0;
+}
+
+.table-achievement tr td:last-child {
+    text-align: right;
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: -.2px;
+    color: #9298a1;
+    padding: 10px 0;
+}
+
+.player-profile-main-wrap .name-player-profile {
+    font-size: 28px;
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #354052;
+}
+
+.player-profile-main-wrap .btn-follow-player {
+    outline-style: none;
+    margin-left: 15px;
+    border-radius: 20px;
+    border: 1px solid #f0564a;
+    background-color: #f0564a;
+    padding: 5px 10px 2px;
+    color: #fff;
+    font-weight: 700;
+    height: 29px;
+    min-width: 100px;
+}
+
+.item-nav-name {
+    width: 66px;
+    height: 15px;
+    opacity: .7;
+    font-size: 12px;
+    font-weight: 700;
+    color: #354052;
+    text-transform: uppercase;
+    display: inline;
+}
+
+.item-nav-value {
+    font-size: 15px;
+    font-family: Poppins;
+    color: #f0564a;
+}
+
+p.title-player-profile {
+    margin-top: 30px;
+    font-size: 24px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #354052;
+}
+
+.content-player-profile {
+    white-space: normal;
+    word-break: break-word;
+    margin-top: 15px;
+}
+
+.content-player-profile p {
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.63;
+    letter-spacing: normal;
+    color: #354052;
+    font-size: 14px;
+}
+
+.content-player-profile .album-of-player {
+    margin: 23px 0;
+    position: relative;
+}
+
+.album-of-player a {
+    overflow: hidden;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    width: 106px;
+    height: 106px;
+    text-align: center;
+    background-color: #000;
+    border: 1px solid #e2e6ea;
+    vertical-align: middle;
+}
+
+.content-player-profile .album-of-player a img {
+    border: 0;
+    height: auto;
+    max-width: 100%;
+    width: auto;
+}
+
+.top-donate ul.nav li button {
+    font-size: 23px;
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #354052;
+    border: none!important;
+    padding: 0 15px 0 0;
+    opacity: 0.5;
+}
+
+.top-donate .nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    color: #354052;
+    background-color: transparent;
+    opacity: 1;
+}
+
+.top-donate .ky-1 {
+    color: #354052;
+    font-weight: 700;
+}
+
+.top-donate .total-amount {
+    text-align: right;
+    color: #354052;
+    font-weight: 600;
+}
+
+.top-donate .tab-content .tab-pane td.d-flex {
+    margin-bottom: 10px;
+}
+
+.top-donate .avt img.avt-img {
+    width: 25px;
+    height: 25px;
+}
+
+.top-donate .avt img.avt-rank {
+    width: 17px;
+    height: 17px;
+}
+
+.top-donate .tab-content .tab-pane .name-player-review {
+    font-size: 13.5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 85%;
+    margin-left: 7px;
+}
+
+.review-duo-player .full-size {
+    margin-top: 23px;
+    width: 100%;
+    float: left;
+}
+
+.review-duo-player .full-size .review-image-small {
+    float: left;
+    width: 10%;
+}
+
+.review-duo-player .full-size .wrapper-content-rating {
+    width: 90%;
+    float: left;
+    border-bottom: 1px solid #e2e6ea;
+}
+
+.wrapper-content-rating .review-content {
+    float: left;
+    width: 80%;
+}
+
+.review-duo-player .full-size .wrapper-content-rating .review-rating {
+    float: left;
+    text-align: right;
+    width: 20%;
+    height: 100%;
+}
+
+.review-duo-player .full-size .wrapper-content-rating .content-player-review {
+    word-break: break-word;
+    text-align: justify;
+    display: inline-block;
+    width: 100%;
+    clear: both;
+}
+
+.review-duo-player .full-size .wrapper-content-rating .review-content a {
+    margin-bottom: 5px!important;
+    font-size: 15px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.13;
+    letter-spacing: -.2px;
+    color: #354052;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.review-duo-player .full-size .wrapper-content-rating .review-content .time-player-review {
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    color: #616770;
+}
+
+.rateting-style {
+    color: #ff9948;
+    margin-bottom: 5px;
+    white-space: nowrap;
+}
+
+.rateting-style i {
+    margin: 0 1px;
+}
+
+.rateting-style span {
+    font-size: 13px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.54;
+    letter-spacing: -.2px;
+    color: #9298a1;
+}
+
+.review-duo-player .full-size .wrapper-content-rating .review-rating .time-rent-review {
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    color: #000;
+}
+
+.page_account {
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.page_account p {
+    border: 1px solid #f0564a;
+    color: #f0564a;
+    cursor: pointer;
+    display: inline-block;
+    padding: 13px 0;
+    margin: 5px 2px 0;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.page_account p.active {
+    background-color: #f0564a;
+    color: #fff;
+}
+
+.page_account p:last-child {
+    width: 70px;
+    border-radius: 40px;
+}
+
+.player-profile-right-wrap {
+    padding: 30px 0 0 30px!important;
+}
+
+.player-profile-right-wrap .right-player-profile {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    padding: 10px;
+    border: 1px solid #e2e6ea;
+}
+
+.price-player-profile {
+    font-size: 24px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #f0564a;
+}
+
+.btn-my-style {
+    width: 100%;
+    height: 54px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    margin: 10px 0 0;
+    border: 0;
+    text-transform: uppercase;
+}
+
+.btn-my-style.red {
+    background-color: #f0564a;
+    color: #fff;
+}
+
+.btn-my-style.white {
+    color: #354052;
+    background-color: #fff;
+    border: 1px solid #e2e6ea;
+}
+
+.btn-my-style.white {
+    color: #354052;
+    background-color: #fff;
+    border: 1px solid #e2e6ea;
+}
+
+.btn-my-style i {
+    margin-right: 5px;
+}
